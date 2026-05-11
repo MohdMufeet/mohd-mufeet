@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Mohd Mufeet · Full-Stack Developer Portfolio</title>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+</head>
+<body>
+  
+  <!-- Desktop Header (sticky top) -->
+  <header class="desktop-header" id="desktopHeader">
+    <div class="header-container">
+      <a href="#" class="logo gradient-text">Mufeet<span class="dot">.</span></a>
+      <nav class="desktop-nav">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <!-- Dark Mode Toggle -->
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <a href="assets/resume.pdf" download class="btn btn-primary btn-sm">
+          <i class="fas fa-download"></i> Resume
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Bottom Navigation -->
+  <nav class="mobile-bottom-nav" id="mobileNav">
+    <a href="#about" class="mobile-nav-item" data-tooltip="About">
+      <i class="fas fa-user"></i>
+    </a>
+    <a href="#skills" class="mobile-nav-item" data-tooltip="Skills">
+      <i class="fas fa-code"></i>
+    </a>
+    <a href="#experience" class="mobile-nav-item" data-tooltip="Work">
+      <i class="fas fa-briefcase"></i>
+    </a>
+    <a href="#projects" class="mobile-nav-item" data-tooltip="Projects">
+      <i class="fas fa-folder"></i>
+    </a>
+    <a href="#contact" class="mobile-nav-item" data-tooltip="Contact">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <span class="badge"><i class="fas fa-terminal"></i> Full-Stack Developer</span>
+          <h1>Mohd <span class="gradient-text">Mufeet</span></h1>
+          <p class="hero-description">
+            Motivated professional with experience in full-stack development, backend systems, and AI-driven workflows.
+            I quickly master new tools and take full ownership of responsibilities.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+              View Projects <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="assets/resume.pdf" download class="btn btn-outline">
+              <i class="fas fa-download"></i> Download Resume
+            </a>
+          </div>
+        </div>
+        <div class="hero-avatar">
+          <!-- Your Image Here -->
+          <div class="avatar-image-container">
+            <img src="assets/mufeet.jpg" alt="Mohd Mufeet" class="avatar-image" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'avatar-fallback\'><span>MM</span></div>';">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <p>
+            I'm Mohd Mufeet, a fast-learning developer focused on full-stack applications and AI-enhanced workflows.
+            Currently pursuing a Bachelor of Arts at Chhatrapati Shahu Ji Maharaj University (2024–2027), I balance
+            academic knowledge with real-world software practice. I built my skills through self-driven projects,
+            mastering React, Next.js, Node, and cloud databases like Supabase.
+          </p>
+          <div class="about-tags">
+            <span><i class="fas fa-map-marker-alt"></i> India</span>
+            <span><i class="fas fa-language"></i> English · Hindi</span>
+            <span><i class="fas fa-graduation-cap"></i> B.A. 2024–2027</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-alt">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3><i class="fas fa-laptop-code"></i> Technical Skills</h3>
+            <div class="skill-pills">
+              <span class="skill-pill-hover">JavaScript</span>
+              <span class="skill-pill-hover">React.js</span>
+              <span class="skill-pill-hover">Next.js</span>
+              <span class="skill-pill-hover">Node.js</span>
+              <span class="skill-pill-hover">Express.js</span>
+              <span class="skill-pill-hover">MongoDB</span>
+              <span class="skill-pill-hover">Supabase</span>
+              <span class="skill-pill-hover">Git & GitHub</span>
+              <span class="skill-pill-hover">Tailwind CSS</span>
+              <span class="skill-pill-hover">MS-Office</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <h3><i class="fas fa-user-check"></i> Soft Skills</h3>
+            <div class="skill-pills">
+              <span class="skill-pill-hover">Communication</span>
+              <span class="skill-pill-hover">Task Management</span>
+              <span class="skill-pill-hover">Problem Solving</span>
+              <span class="skill-pill-hover">Leadership Support</span>
+              <span class="skill-pill-hover">Fast Learning</span>
+              <span class="skill-pill-hover">Google Workspace</span>
+              <span class="skill-pill-hover">AI-Assisted Dev</span>
+              <span class="skill-pill-hover">Coordination</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title">Experience & Timeline</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="date">2024 – Present</span>
+              <h3>Self-Driven Software Development</h3>
+              <ul>
+                <li>Built multiple full-stack web apps independently</li>
+                <li>Learned modern frontend & backend through hands-on practice</li>
+                <li>Used AI-assisted tools for debugging and productivity</li>
+                <li>Managed deployment workflows and feature implementation</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker highlight"></div>
+            <div class="timeline-content">
+              <span class="date">October 2025</span>
+              <h3>Kapcontrol Blog – Next.js + Supabase Migration</h3>
+              <p>Migrated backend from Express.js to Supabase. Implemented authentication, database integration, and serverless logic.</p>
+              <div class="tech-stack">
+                <span>Next.js</span><span>Supabase</span><span>Express (legacy)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-alt">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <!-- Project Card 1 -->
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fas fa-blog fa-3x"></i>
+            </div>
+            <div class="project-info">
+              <h3>Kapcontrol Blog</h3>
+              <p>Blog platform migrated from Express to Supabase with Next.js frontend. Implemented auth, RLS, and serverless architecture.</p>
+              <div class="project-links">
+                <a href="project-detail.html" class="btn btn-sm btn-primary">Details</a>
+                <a href="https://github.com" target="_blank" class="btn btn-sm btn-outline github-btn">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Project Card 2 -->
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fas fa-globe fa-3x"></i>
+            </div>
+            <div class="project-info">
+              <h3>Portfolio Site</h3>
+              <p>Personal portfolio with dark mode, responsive design, and contact form integration.</p>
+              <div class="project-links">
+                <a href="project-detail.html" class="btn btn-sm btn-primary">Details</a>
+                <a href="https://github.com" target="_blank" class="btn btn-sm btn-outline github-btn">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications & Education -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="two-column">
+          <div>
+            <h2 class="section-title">Certifications</h2>
+            <ul class="cert-list">
+              <li><i class="fas fa-check-circle"></i> Basic Computer Diploma – STP</li>
+              <li><i class="fas fa-check-circle"></i> Advance Excel – Udemy</li>
+              <li><i class="fas fa-check-circle"></i> Diploma in Web Development – STP</li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="section-title">Education</h2>
+            <div class="edu-card">
+              <h3>Bachelor of Arts (B.A.)</h3>
+              <p>Chhatrapati Shahu Ji Maharaj University</p>
+              <span>2024 – 2027 (Expected)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+      <div class="container">
+        <h2>Startup Ready & Fast-Paced</h2>
+        <p>Comfortable learning new technologies quickly. Open to managing operations, research, and coordination tasks.</p>
+        <div class="cta-tags">
+          <span>🤖 AI Workflows</span><span>⚡ Fast Adaptation</span><span>📋 Operations</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section with Form -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="text-center">Have a question or want to work together? Fill out the form below and I'll get back to you.</p>
+        
+        <!-- Contact Links with Blue Hover -->
+        <div class="contact-links">
+          <a href="mailto:mohdmufeet786@gmail.com" class="contact-link-item">
+            <i class="fas fa-envelope"></i> mohdmufeet@email.com
+          </a>
+          <a href="https://github.com/mohdmufeet" target="_blank" class="contact-link-item">
+            <i class="fab fa-github"></i> GitHub Profile
+          </a>
+          <a href="https://linkedin.com/in/mohd-mufeet" target="_blank" class="contact-link-item">
+            <i class="fab fa-linkedin"></i> LinkedIn Profile
+          </a>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-container">
+          <form id="contactForm" class="contact-form" action="https://formspree.io/f/xeenvnyk" method="POST">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's this about?">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <p id="formStatus" class="form-status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Mohd Mufeet</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="js/navigation.js"></script>
+  <script src="js/dark-mode.js"></script>
+  <script src="js/main.js"></script>
+  
+  <!-- Formspree Setup Script (for contact form) -->
+  <script>
+    // Form handling with Formspree (or you can use EmailJS, Web3Forms, etc.)
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+    
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(contactForm);
+      formStatus.textContent = 'Sending...';
+      formStatus.className = 'form-status loading';
+      
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+        
+        if (response.ok) {
+          formStatus.textContent = '✅ Message sent successfully! I\'ll get back to you soon.';
+          formStatus.className = 'form-status success';
+          contactForm.reset();
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (error) {
+        formStatus.textContent = '❌ Oops! Something went wrong. Please try emailing me directly.';
+        formStatus.className = 'form-status error';
+      }
+    });
+  </script>
+</body>
+</html>

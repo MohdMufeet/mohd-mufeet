@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Detail · Mohd Mufeet</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+</head>
+<body>
+  
+  <header class="desktop-header" id="desktopHeader">
+    <div class="header-container">
+      <a href="index.html" class="logo gradient-text">Mufeet<span class="dot">.</span></a>
+      <nav class="desktop-nav">
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#skills" class="nav-link">Skills</a>
+        <a href="index.html#projects" class="nav-link">Projects</a>
+      </nav>
+      <div class="header-actions">
+        <button id="themeToggle" class="icon-btn"><i class="fas fa-moon" id="themeIcon"></i></button>
+        <a href="assets/resume.pdf" download class="btn btn-primary btn-sm"><i class="fas fa-download"></i> Resume</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="project-detail-page">
+    <div class="container">
+      <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+      
+      <h1>Kapcontrol Blog Migration</h1>
+      <div class="project-meta">
+        <span class="badge">October 2025</span>
+        <span class="badge">Next.js</span>
+        <span class="badge">Supabase</span>
+      </div>
+
+      <div class="project-description">
+        <h2>Overview</h2>
+        <p>
+          The Kapcontrol Blog project involved migrating an existing blog platform from a traditional Express.js backend
+          to a modern, serverless architecture using Next.js and Supabase. This migration improved scalability,
+          reduced server costs, and simplified the deployment pipeline.
+        </p>
+
+        <h2>Key Contributions</h2>
+        <ul>
+          <li>Removed Express.js backend and replaced with Supabase database, auth, and storage</li>
+          <li>Implemented Row Level Security (RLS) for data protection</li>
+          <li>Built responsive UI with Next.js App Router and Tailwind CSS</li>
+          <li>Integrated GitHub OAuth via Supabase for authentication</li>
+          <li>Set up CI/CD pipeline with Vercel deployment</li>
+        </ul>
+
+        <h2>Tech Stack</h2>
+        <div class="tech-stack">
+          <span>Next.js</span><span>Supabase</span><span>PostgreSQL</span><span>Tailwind CSS</span><span>Vercel</span>
+        </div>
+      </div>
+
+      <div class="project-actions">
+        <a href="#" class="btn btn-primary"><i class="fab fa-github"></i> View on GitHub</a>
+        <a href="#" class="btn btn-outline"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container"><p>© 2026 Mohd Mufeet</p></div>
+  </footer>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/dark-mode.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
