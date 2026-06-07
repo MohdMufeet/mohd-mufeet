@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Site · Project Detail</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <style>
+    .project-hero-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      margin: 20px 0;
+      box-shadow: var(--shadow-lg);
+    }
+  </style>
+</head>
+<body>
+  <header class="desktop-header" id="desktopHeader">
+    <div class="header-container">
+      <a href="index.html" class="logo gradient-text">Mufeet<span class="dot">.</span></a>
+      <nav class="desktop-nav">
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#projects" class="nav-link">Projects</a>
+      </nav>
+      <div class="header-actions">
+        <button id="themeToggle" class="icon-btn"><i class="fas fa-moon" id="themeIcon"></i></button>
+        <a href="assets/resume.pdf" download class="btn btn-primary btn-sm"><i class="fas fa-download"></i> Resume</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="project-detail-page">
+    <div class="container">
+      <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+      <h1>Portfolio Website</h1>
+      <div class="project-meta">
+        <span class="badge">2025</span>
+        <span class="badge">HTML5</span>
+        <span class="badge">CSS3</span>
+      </div>
+      <img src="assets/projects/portfolio-site.jpg" alt="Portfolio" class="project-hero-image">
+      <div class="project-description">
+        <h2>Overview</h2>
+        <p>Personal portfolio built with HTML, CSS, and JavaScript featuring dark mode, responsive design, and contact form.</p>
+      </div>
+      <div class="project-actions">
+        <a href="https://github.com/mohdmufeet/portfolio" target="_blank" class="btn btn-primary"><i class="fab fa-github"></i> GitHub</a>
+      </div>
+    </div>
+  </main>
+
+  <footer><div class="container"><p>© 2026 Mohd Mufeet</p></div></footer>
+  <script src="js/navigation.js"></script>
+  <script src="js/dark-mode.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
