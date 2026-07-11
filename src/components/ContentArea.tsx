@@ -6,7 +6,7 @@ export default function ContentArea(): React.JSX.Element {
     <div>
       {/* File Path Indicator */}
       <div className="text-xs font-mono text-gray-400 dark:text-neutral-500 mb-6 border-b border-gray-100 dark:border-neutral-800 pb-2">
-        SahilKhandekar / <span className="text-gray-600 dark:text-neutral-300">Overview.md</span>
+        Mohd Mufeet / <span className="text-gray-600 dark:text-neutral-300">Overview.md</span>
       </div>
 
       {/* Main Animated Title / Accent Header */}

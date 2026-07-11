@@ -7,14 +7,14 @@ export default function Sidebar(): React.JSX.Element {
       <div className="w-44 h-44 rounded-full overflow-hidden border-4 border-white dark:border-neutral-900 shadow-md mb-4 bg-gray-200">
         <img
           src="/profile.jpg" // Public folder me apni profile pic responsive layout ke liye set karein
-          alt="Sahil Khandekar"
+          alt="Mohd Mufeet"
           className="w-full h-full object-cover"
         />
       </div>
 
       {/* Identity */}
       <h1 className="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50">
-        Sahil Khandekar
+       Mohd Mufeet
       </h1>
       <p className="text-sm font-medium text-gray-500 dark:text-gray-400 mt-1">
         Full Stack Developer
