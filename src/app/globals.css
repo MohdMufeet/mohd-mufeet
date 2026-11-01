@@ -1,21 +1,90 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0d1117;
-  --foreground: #f0f6fc;
-
-  --card: #161b22;
-  --border: #30363d;
-
-  --primary: #58a6ff;
-
-  --muted: #8b949e;
+  color-scheme: dark;
+  --background: #0c0c0d;
+  --surface: #141416;
+  --surface-raised: #1b1b1e;
+  --border: #26262a;
+  --foreground: #ededea;
+  --muted-foreground: #a1a1a6;
+  --accent: #f5a524;
+  --accent-foreground: #0c0c0d;
+  --destructive: #f0624d;
+  --success: #4cc38a;
+  --ring: var(--accent);
+  --container-width: 75rem;
+  --container-narrow-width: 48rem;
+  --section-y: 5rem;
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --type-display: clamp(2.5rem, 5vw, 4.5rem);
+  --type-h1: clamp(2rem, 4vw, 3rem);
+  --type-h2: clamp(1.75rem, 3vw, 2.25rem);
+  --type-h3: clamp(1.25rem, 2vw, 1.5rem);
+  --type-body-lg: 1.125rem;
+  --type-body: 1rem;
+  --type-small: 0.875rem;
+  --type-label: 0.8125rem;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+.light {
+  color-scheme: light;
+  --background: #fafaf8;
+  --surface: #ffffff;
+  --surface-raised: #f1f1ed;
+  --border: #deded8;
+  --foreground: #171718;
+  --muted-foreground: #5b5b60;
+  --accent: #885300;
+  --accent-foreground: #ffffff;
+  --destructive: #b83220;
+  --success: #167347;
+  --ring: var(--accent);
+}
+
+.light .theme-toggle__sun {
+  display: none;
+}
+
+.theme-toggle__moon {
+  display: none;
+}
+
+.light .theme-toggle__moon {
+  display: block;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-border: var(--border);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-success: var(--success);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --text-display: var(--type-display);
+  --text-h1: var(--type-h1);
+  --text-h2: var(--type-h2);
+  --text-h3: var(--type-h3);
+  --text-body-lg: var(--type-body-lg);
+  --text-body: var(--type-body);
+  --text-small: var(--type-small);
+  --text-label: var(--type-label);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
 }
 
 html {
@@ -23,16 +92,189 @@ html {
 }
 
 body {
+  min-height: 100vh;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: var(--type-body);
+  line-height: 1.6;
 }
 
 a {
   color: inherit;
-  text-decoration: none;
+  text-underline-offset: 0.2em;
 }
 
-button {
-  cursor: pointer;
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.container-shell {
+  @apply mx-auto w-full px-5 md:px-8 lg:px-10;
+  max-width: var(--container-width);
+}
+
+.container-shell--narrow {
+  max-width: var(--container-narrow-width);
+}
+
+.section-shell {
+  @apply scroll-mt-20;
+  padding-block: var(--section-y);
+}
+
+.button-link {
+  @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-md border border-transparent px-5 py-3 text-small leading-tight font-semibold;
+  text-decoration: none;
+  transition:
+    background-color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
+}
+
+.button-link:hover {
+  transform: translateY(-1px);
+}
+
+.button-link:active {
+  transform: translateY(0);
+}
+
+.button-link--primary {
+  @apply bg-accent text-accent-foreground;
+}
+
+.button-link--primary:hover {
+  background: color-mix(in srgb, var(--accent) 88%, var(--foreground));
+}
+
+.button-link--secondary {
+  @apply border-border bg-surface text-foreground;
+}
+
+.button-link--secondary:hover {
+  background: var(--surface-raised);
+}
+
+.button-link--ghost {
+  @apply text-foreground;
+}
+
+.button-link--ghost:hover {
+  background: var(--surface-raised);
+}
+
+.button-link[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.tech-chip {
+  @apply inline-flex min-h-8 items-center rounded-full border border-border bg-surface px-3 py-1 text-label text-muted-foreground;
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  line-height: 1.25;
+}
+
+.form-field {
+  @apply min-h-11 w-full rounded-md border border-border bg-background px-3 py-3 text-foreground;
+}
+
+.form-field[aria-invalid="true"] {
+  border-color: var(--destructive);
+}
+
+.form-field:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.form-error {
+  @apply mt-2 text-small text-destructive;
+}
+
+.service-card,
+.project-card {
+  transition:
+    border-color var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
+}
+
+.portfolio-stats {
+  overflow: hidden;
+}
+
+.portfolio-stat {
+  position: relative;
+  transition: background-color var(--duration-fast) var(--ease-standard);
+}
+
+.portfolio-stat:hover {
+  background: var(--surface-raised);
+}
+
+.portfolio-stat + .portfolio-stat {
+  border-left: 1px solid var(--border);
+}
+
+.portfolio-stat__rule {
+  width: 2rem;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  transform: scaleX(0.65);
+  transition: transform var(--duration-slow) var(--ease-standard);
+}
+
+.portfolio-stat:hover .portfolio-stat__rule {
+  transform: scaleX(1.35);
+}
+
+.service-card:hover,
+.project-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.service-card:focus-within,
+.project-card:focus-within {
+  border-color: var(--ring);
+}
+
+.status-message {
+  @apply rounded-md border border-border bg-surface px-4 py-3 text-foreground;
+}
+
+.status-message[data-type="error"] {
+  border-color: var(--destructive);
+}
+
+.status-message[data-type="success"] {
+  border-color: var(--success);
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --section-y: 7.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
